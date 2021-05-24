@@ -4,10 +4,16 @@
 #include <iostream>
 #include <algorithm>
 #include <bits/stdc++.h>
+#include <fstream>
 using namespace std;
 
-int main()
+int main(int argc, char ** argv)
 {
+    //std::ofstream out("../attribute_parser.output");
+    std::string fn = argv[1];
+    std::ofstream out("../test_cases/"+fn +".output");
+    std::streambuf *coutbuf = std::cout.rdbuf(); //save old buf
+    std::cout.rdbuf(out.rdbuf()); //redirect std::cout to out.txt!
     int n, q,i;
     cin>>n>>q;
     string temp;
@@ -79,5 +85,6 @@ int main()
             cout<<m[quer[i]]<<endl;
         }
     }
+    out.close();
     return 0;
 }

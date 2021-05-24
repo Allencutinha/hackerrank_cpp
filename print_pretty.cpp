@@ -3,15 +3,15 @@
 using namespace std;
 
 int main() {
-	int T; cin >> T;
-	cout << setiosflags(ios::uppercase);
-	cout << setw(0xf) << internal;
-	while(T--) {
-		double A; cin >> A;
-		double B; cin >> B;
-		double C; cin >> C;
+    int T; cin >> T;
+    cout << setiosflags(ios::uppercase);
+    cout << setw(0xf) << internal;
+    while(T--) {
+        double A; cin >> A;
+        double B; cin >> B;
+        double C; cin >> C;
 
-		
+        
             cout << std::hex << std::left << std::showbase << std::nouppercase; // formatting
             cout << (long long) A << endl; // actual printed part
 
@@ -22,7 +22,7 @@ int main() {
             
             cout << std::scientific << std::uppercase << std::noshowpos << std::setprecision(9); // formatting
             cout << C << endl; // actual printed part
-	}
-	return 0;
+    }
+    return 0;
 
 }
